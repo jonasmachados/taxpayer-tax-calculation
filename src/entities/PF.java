@@ -20,7 +20,7 @@ public class PF extends Taxpayer {
         return ""
                 + getName()
                 + ": $ "
-                + calcTax();
+                + String.format("%.2f", calcTax());
     }
 
     double totalTax = 0;
@@ -39,10 +39,10 @@ public class PF extends Taxpayer {
         }
         if (getAnnualIncome() > 20000) {
             if (healthExpenses == 0) {
-                totalTax = getAnnualIncome() * 0.15;
+                totalTax = getAnnualIncome() * 0.25;
             }
             if (healthExpenses > 0) {
-                totalTax = (getAnnualIncome() * 0.15) - (healthExpenses * 0.5);
+                totalTax = (getAnnualIncome() * 0.25) - (healthExpenses * 0.5);
 
             }
         }

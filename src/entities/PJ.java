@@ -20,7 +20,7 @@ public class PJ extends Taxpayer {
         return "" 
                 + getName()
                 + ": $ "
-                + calcTax();
+                + String.format("%.2f", calcTax());
     }
 
     double totalTax = 0;
@@ -30,7 +30,7 @@ public class PJ extends Taxpayer {
         if (numberEmployees > 10) {
             totalTax = getAnnualIncome() * 0.14;
         }else{
-            totalTax = getAnnualIncome() * 0.14;
+            totalTax = getAnnualIncome() * 0.16;
         }
         return totalTax;
     }
