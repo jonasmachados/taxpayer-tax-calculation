@@ -17,11 +17,14 @@ public class PF extends Taxpayer {
 
     @Override
     public String showTax() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-
+        return ""
+                + getName()
+                + ": $ "
+                + calcTax();
     }
 
     double totalTax = 0;
+
     @Override
     public double calcTax() {
 
@@ -62,7 +65,5 @@ public class PF extends Taxpayer {
     public void setTotalTax(double totalTax) {
         this.totalTax = totalTax;
     }
-    
-    
 
 }
